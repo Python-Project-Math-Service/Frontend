@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Service UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Math Microservice</h1>
+
+  <section>
+    <h2>Power</h2>
+    <input id="pow-base" type="number" placeholder="Base">
+    <input id="pow-exp" type="number" placeholder="Exponent">
+    <button onclick="calculatePow()">Calculate</button>
+    <p id="pow-result"></p>
+  </section>
+
+  <section>
+    <h2>Factorial</h2>
+    <input id="fact-number" type="number" placeholder="Number">
+    <button onclick="calculateFactorial()">Calculate</button>
+    <p id="fact-result"></p>
+  </section>
+
+  <section>
+    <h2>Fibonacci</h2>
+    <input id="fib-index" type="number" placeholder="Index">
+    <button onclick="calculateFibonacci()">Calculate</button>
+    <p id="fib-result"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
