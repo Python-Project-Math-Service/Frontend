@@ -1,5 +1,5 @@
 // const BASE_URL = "http://localhost:8000";
-const BASE_URL = "math-backend-app.salmonstone-a26147bd.eastus.azurecontainerapps.io";
+const BASE_URL = "http://math-backend-app.salmonstone-a26147bd.eastus.azurecontainerapps.io";
 
 async function calculatePow() {
   const base = document.getElementById("pow-base").value;
