@@ -27,3 +27,16 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.ACR_LOGIN_SERVER }}/math-frontend:latest
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Container App
+        run: |
+          az containerapp update \
+            --name math-frontend-app \
+            --resource-group pythonmathservice \
+            --image ${{ secrets.ACR_LOGIN_SERVER }}/math-frontend:latest \
+            --revision-suffix auto-${{ github.run_number }}
